@@ -1,0 +1,10 @@
+name: Prueba de reconocimiento
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Saludo de prueba
+        run: echo "¡GitHub Actions está funcionando correctamente!"
