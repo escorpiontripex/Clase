@@ -1,0 +1,16 @@
+name: Mi Primer Workflow  # Nombre de la acción
+
+on:                       # Evento que la desencadena
+  push:
+    branches: [ main ]
+
+jobs:                     # Tareas a realizar
+  probar-codigo:
+    runs-on: ubuntu-latest # Sistema operativo virtual donde se ejecuta
+
+    steps:
+      - name: Descargar el código del repo
+        uses: actions/checkout@v4
+
+      - name: Ejecutar un mensaje de prueba
+        run: echo "¡Hola! La acción se está ejecutando correctamente."
